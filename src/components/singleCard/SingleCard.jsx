@@ -21,7 +21,7 @@ const SingleCard = ({tile}) => {
     </h2>
     <p>{tile.dimensions}</p>
     <p>Price : {tile.price}$</p>
-    <Link href={"/"}><button className="btn">View Deteils</button></Link>
+    <Link href={`/tile/${tile.id}`}><button className="btn">View Deteils</button></Link>
   </div>
 </div>
     );

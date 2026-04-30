@@ -9,7 +9,7 @@ const Featrued = async () => {
    
 
     return (
-        <div className="space-y-6">
+        <div className="space-y-6 mt-6">
             <div className="flex justify-between items-center">
             <h2 className="text-2xl font-semibold">Featrued Tiles</h2>
             <Link href={"/allTiles"}>
