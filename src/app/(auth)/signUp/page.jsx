@@ -9,13 +9,16 @@ const SignUpPage = () => {
   <p className="text-center font-semibold">Register to get started</p>
 
   <label className="label">Name</label>
-  <input type="text" className="input" placeholder="Your Name" />
+  <input type="text" className="input" placeholder="Enter Your Name" />
+
+  <label className="label">Image URL</label>
+  <input type="text" className="input" placeholder="Enter Your Image URL" />
 
   <label className="label">Email</label>
-  <input type="email" className="input" placeholder="Email" />
+  <input type="email" className="input" placeholder="Enter Your Email" />
 
   <label className="label">Password</label>
-  <input type="password" className="input" placeholder="Password" />
+  <input type="password" className="input" placeholder="Enter Your Password" />
 
   <button className="btn btn-neutral mt-4">Register</button>
   <div className="divider">OR</div>
