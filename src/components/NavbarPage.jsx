@@ -8,7 +8,7 @@ const NavbarPage = () => {
   <li><NavLink href={"/profile"}>Profile</NavLink></li>
   </>
   return (
-    <div className="navbar bg-gray-900 text-white shadow-sm ">
+    <div className="navbar bg-gray-900 text-white shadow-sm sticky top-0 z-20">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -16,7 +16,7 @@ const NavbarPage = () => {
       </div>
       <ul
         tabIndex="-1"
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+        className="menu menu-sm dropdown-content font-semibold rounded-box z-1 mt-3 w-52 p-2 shadow">
         {links}
       </ul>
     </div>
