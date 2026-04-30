@@ -1,4 +1,5 @@
-[
+{
+    "products": [
   {
     "id": "tile_001",
     "title": "Ceramic Blue Tile",
@@ -239,4 +240,5 @@
     "material": "Ceramic",
     "inStock": true
   }
-]
+] 
+}
