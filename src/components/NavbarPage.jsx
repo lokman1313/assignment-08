@@ -1,5 +1,8 @@
+"use client"
 import Link from "next/link";
 import NavLink from "./NavLink";
+import { authClient } from "@/lib/auth-client";
+import Image from "next/image";
 
 const NavbarPage = () => {
   const links=<>
@@ -7,6 +10,10 @@ const NavbarPage = () => {
   <li><NavLink href={"/allTiles"}>All Tiles</NavLink></li>
   <li><NavLink href={"/profile"}>Profile</NavLink></li>
   </>
+
+  const { data: session , isPending } = authClient.useSession()
+    const userData = session?.user;
+    console.log(userData)
   return (
     <div className="navbar bg-gray-900 text-white shadow-sm sticky top-0 z-20">
   <div className="navbar-start">
@@ -16,7 +23,7 @@ const NavbarPage = () => {
       </div>
       <ul
         tabIndex="-1"
-        className="menu menu-sm dropdown-content font-semibold rounded-box z-1 mt-3 w-52 p-2 shadow">
+        className="menu menu-sm dropdown-content font-semibold rounded-box text-accent-content z-1 mt-3 w-52 p-2 shadow">
         {links}
       </ul>
     </div>
@@ -28,7 +35,19 @@ const NavbarPage = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <Link href={"/login"} className="btn btn-success">Login</Link>
+    {
+     isPending ? (<span className="loading loading-dots loading-xl"></span>) : userData ?( <div className="space-x-3">
+        <div className="avatar ">
+  <div className="ring-success ring-offset-base-100 rounded-full ring-2 ring-offset-2">
+    <Image src={userData.image} alt="logo" width={32} height={32}></Image>
+  </div>
+</div>
+        <button onClick={ async ()=> await authClient.signOut() } className="btn btn-error text-base-300 font-semibold">Logout</button>
+        </div>
+        ) : 
+      <Link href={"/login"} className="btn btn-success text-base-300 font-semibold">Login</Link>
+    }
+    
   </div>
 </div>
   );
