@@ -3,6 +3,7 @@ import Image from "next/image";
 import hero from "../../../public/hero-bg.jpg"
 import Featrued from "@/components/Featrued";
 import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -23,7 +24,7 @@ export default function Home() {
         Explore our premium collection of tiles <br /> crafted to bring elegance to your space.
       </p>
       <Link href={"/allTiles"}>
-      <button className="btn btn-success text-white font-semibold text-md">Browse Now</button>
+      <button className="btn btn-success text-white font-semibold text-md ">Browse Now<FaArrowRight /></button>
       </Link>
     </div>
   </div>

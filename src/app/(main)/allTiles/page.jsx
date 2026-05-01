@@ -29,7 +29,7 @@ const AllTilesPage =async ({searchParams}) => {
                 <SearchBox></SearchBox>
             </div>
             
-            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 ">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
                 {
                   tiles.length===0 ? (<div className="text-center py-20 px-5 rounded-2xl m-10 bg-gray-200"> <h2 className="text-2xl font-semibold">No tiles found 😕</h2>
                  <p className="text-gray-500 mt-2">Try searching with a different keyword or category</p></div>) 

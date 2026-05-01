@@ -16,7 +16,7 @@ const Featrued = async () => {
             <button className="btn btn-outline">View all</button>
             </Link>
             </div>
-            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {
                     tiles.map(tile => <SingleCard key={tile.id} tile={tile}></SingleCard>)
                 }
