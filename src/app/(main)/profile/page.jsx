@@ -1,5 +1,6 @@
 "use client"
 
+import UpdateProfile from "@/components/UpdateProfile";
 import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
 
@@ -24,17 +25,18 @@ const ProfilePage = () => {
                 
                 <Image 
                     src={userData?.image} 
-                    width={250} 
+                    width={150} 
                     alt="profile-picture" 
                     height={100}
                     className="rounded-full shadow-lg"
                 />
                 
-                <div className="mt-10 text-center">
+                <div className="my-6 text-center">
                     <h3 className="text-gray-500">User ID: {userData?.id}</h3>
                     <h3 className="text-lg text-gray-600 font-medium">Name: {userData?.name}</h3>
                     <h3 className="text-sm text-gray-600">Email: {userData?.email}</h3>
                 </div>
+                <UpdateProfile></UpdateProfile>
             </div>
         </div>
     );
