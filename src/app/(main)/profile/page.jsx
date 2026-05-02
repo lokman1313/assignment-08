@@ -3,6 +3,7 @@
 import UpdateProfile from "@/components/UpdateProfile";
 import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
+import { redirect } from "next/navigation";
 
 
 const ProfilePage = () => {
@@ -10,13 +11,16 @@ const ProfilePage = () => {
     const { data: session, isPending } = authClient.useSession();
     const userData = session?.user;
 
-    
     if (isPending) {
         return (
             <div className="flex justify-center items-center h-screen">
                 <span className="loading loading-ring loading-xl"></span>
             </div>
         );
+    }
+    
+    if(!session){
+        redirect("/login")
     }
 
     return (
