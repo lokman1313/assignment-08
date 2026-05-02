@@ -3,6 +3,7 @@ import Link from "next/link";
 import NavLink from "./NavLink";
 import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
+import { IoLogOutOutline } from "react-icons/io5";
 
 const NavbarPage = () => {
   const links=<>
@@ -42,7 +43,7 @@ const NavbarPage = () => {
     <Image src={userData.image} alt="logo" width={32} height={32}></Image>
   </div>
 </div>
-        <button onClick={ async ()=> await authClient.signOut() } className="btn btn-error text-base-300 font-semibold">Logout</button>
+        <button onClick={ async ()=> await authClient.signOut() } className="btn btn-error text-base-300 font-semibold">Logout<IoLogOutOutline /></button>
         </div>
         ) : 
       <Link href={"/login"} className="btn btn-success text-base-300 font-semibold">Login</Link>

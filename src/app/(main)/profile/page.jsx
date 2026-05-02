@@ -18,7 +18,7 @@ const ProfilePage = () => {
             </div>
         );
     }
-    
+
     if(!session){
         redirect("/login")
     }
@@ -34,7 +34,7 @@ const ProfilePage = () => {
                    src={userData.image}
                    alt="User avatar"
                    fill
-                   sizes="48px"
+                   sizes="200px"
                    className="object-cover rounded-full ring-2 ring-success ring-offset-2 ring-offset-base-100"
                  />
                </div>

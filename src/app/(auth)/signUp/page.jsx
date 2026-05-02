@@ -28,7 +28,7 @@ const handelRegForm = async (formData) => {
     email:email, // required
     password:password, // required
     image: image,
-    callbackURL: "/",
+    callbackURL: "/login",
 });
 if (error) {
     console.log(error);
