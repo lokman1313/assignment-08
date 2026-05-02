@@ -17,8 +17,6 @@ const UpdateProfile = () => {
     image: image,
     name: name,
 })
-
-    // safe close
     dialogRef.current?.close();
   };
 

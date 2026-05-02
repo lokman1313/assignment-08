@@ -33,8 +33,8 @@ const handelLoginForm = async (formData) => {
 if (error) {
     toast.error(error.message)
   } else {
-    toast.success("Login Successful")
-    redirect("/")
+      toast.success("Login Successful")
+      redirect("/")
   }
 }
 
