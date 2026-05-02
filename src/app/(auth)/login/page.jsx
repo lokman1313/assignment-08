@@ -5,6 +5,7 @@ import { redirect } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 
 
@@ -30,9 +31,9 @@ const handelLoginForm = async (formData) => {
     callbackURL: "/",
 });
 if (error) {
-    console.log(error);
-    alert(error.message);
+    toast.error(error.message)
   } else {
+    toast.success("Login Successful")
     redirect("/")
   }
 }

@@ -5,6 +5,7 @@ import { redirect } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 
 
@@ -31,8 +32,9 @@ const handelRegForm = async (formData) => {
 });
 if (error) {
     console.log(error);
-    alert(error.message);
+    toast.error(error.message)
   } else {
+    toast.success("Registation Success")
     redirect("/login")
   }
 }
