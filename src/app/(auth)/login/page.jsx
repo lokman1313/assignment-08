@@ -2,11 +2,16 @@
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 
 
 const LoginPage = () => {
+
+    const [isShowPassword , setShaowPassword]=useState(false)
+
       const handelGoogle = async () => {
   const data = await authClient.signIn.social({
     provider: "google",
@@ -35,7 +40,7 @@ if (error) {
     return (
         <div className="my-20 bg-base-200 border-base-300 rounded-box w-xs mx-auto  border p-4">
             <form onSubmit={handleSubmit(handelLoginForm)}>
-        <fieldset className="fieldset ">
+        <fieldset className="fieldset relative ">
   <h2 className="text-center text-3xl font-semibold">Welcome Back</h2>
   <p className="text-center font-semibold">Login Your Account</p>
 
@@ -44,8 +49,14 @@ if (error) {
   {errors.email && <span className="text-red-500">{errors.email.message}</span>}
 
   <label className="label">Password</label>
-  <input type="password" className="input" placeholder="Enter Your Password"{...register("password",{ required: "password is required" })} />
+  <input type={isShowPassword ? "text" : "password"}
+   className="input" placeholder="Enter Your Password"{...register("password",{ required: "password is required" })} />
   {errors.password && <span className="text-red-500">{errors.password.message}</span>}
+  <span 
+     className="absolute right-3 top-44 text-lg"
+     onClick={()=>setShaowPassword(!isShowPassword)}>
+    {isShowPassword ? <FaEye /> : <FaEyeSlash />}
+  </span>
 
   <button className="btn btn-neutral mt-4">Login</button>
 
