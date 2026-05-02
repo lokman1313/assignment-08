@@ -35,13 +35,13 @@ export default function Home() {
 
       </h1>
 
-      <p className="mb-6 text-gray-200 text-sm md:text-base animate__animated animate__fadeInUp animate__delay-1s">
+      <p className="mb-6 text-gray-200 text-sm md:text-base animate__animated animate__fadeInDown animate__delay-1s">
         Explore our premium collection of tiles <br />
         crafted to bring elegance to your space.
       </p>
 
       <Link href="/allTiles">
-        <button className="btn btn-success text-white font-semibold flex items-center gap-2 mx-auto animate__animated animate__fadeInUp animate__delay-2s">
+        <button className="btn btn-success text-white font-semibold flex items-center gap-2 mx-auto animate__animated animate__fadeInUp animate__delay-1s">
           Browse Now <FaArrowRight />
         </button>
       </Link>

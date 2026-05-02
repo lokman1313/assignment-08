@@ -28,7 +28,14 @@ const NavbarPage = () => {
         {links}
       </ul>
     </div>
-    <Link href={"/"} className="flex justify-center items-center text-2xl font-bold">Tiles<span className="text-success">Gallery</span></Link>
+
+  <Link
+  href="/"
+  className="flex justify-center items-center text-2xl font-bold "
+>
+  Tiles<span className="text-success">Gallery</span>
+</Link>
+
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 space-x-2 text-gray-300 font-semibold">
