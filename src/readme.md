@@ -1,3 +1,6 @@
+<img width="1585" height="747" alt="Screenshot 2026-05-02 164155" src="https://github.com/user-attachments/assets/98963283-7206-41c2-831d-3162c0bcfd55" />
+
+
 # Tiles Gallery
 
 ## Project Description
