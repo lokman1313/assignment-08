@@ -2,8 +2,6 @@ import { NextResponse } from "next/server"
 import { headers } from "next/headers"
 import { auth } from "./lib/auth"
 
-export const runtime = "nodejs" ;
-
 export async function proxy(request) {
 
   const session = await auth.api.getSession({
