@@ -25,7 +25,7 @@ const ProfilePage = () => {
             <div className="bg-base-200 rounded-3xl md:w-1/3 mx-auto flex flex-col justify-center items-center py-20 mt-10">
                 
 
-                <div className="relative w-12 h-12">
+                <div className="relative w-30 h-30">
                  <Image
                    src={userData.image}
                    alt="User avatar"
